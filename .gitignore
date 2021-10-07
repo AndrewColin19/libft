@@ -1,0 +1,7 @@
+.vscode
+*.swp
+*.tmp
+.DS_Strore
+*.exe
+*.a
+*.out
