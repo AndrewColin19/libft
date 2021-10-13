@@ -15,35 +15,44 @@
 
 # include <unistd.h>
 # include <stdio.h>
+# include <stdlib.h>
 # include <string.h>
 
-void	*ft_memset(void *s, int c, size_t n); //ok
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+size_t	ft_strlen(const char *s);
+void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
-
-size_t	ft_strlen(const char *s); //ok
-int		ft_isalpha(int c); //ok
-int		ft_isdigit(int c); //ok
-int		ft_isalnum(int c); //ok
-int		ft_isascii(int c); //ok 
-int		ft_isprint(int c); //ok
-int		ft_toupper(int c); //ok
-int		ft_tolower(int c); //ok
-char	*ft_strchr(const char *s, int c); //ok
-char	*ft_strrchr(const char *s, int c); //ok
-int		ft_strncmp(const char *s1, const char *s2, size_t n); //ok
-size_t	ft_strlcpy(char *dst, const char *src, size_t size); //ok
-size_t	ft_strlcat(char *dst, const char *src, size_t size); //ok
-char	*strnstr(const char *s1, const char *s2, size_t len); //ok
-
-int		ft_atoi(const char *pnbr); //ok
-
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *s1, const char *s2, size_t len);
+int		ft_atoi(const char *pnbr);
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
+/*fonctions supplémentaires*/
+char	*ft_substr(char const *s, unsigned int start, size_t len); //ok
+char	*ft_strjoin(char const *s1, char const *s2); //ok
+char	*ft_strtrim(char const *s1, char const *set); // ok
+char	**ft_split(char const *s, char c);
 void	ft_putchar_fd(char c, int fd); //ok
 void	ft_putstr_fd(char *s, int fd); //ok
 void	ft_putendl_fd(char *s, int fd); //ok
 void	ft_putnbr_fd(int n, int fd); //ok
 
-int		ft_islower(int c); //ok
-int		ft_isupper(int c); //ok
-int		ft_isspace(int c); //ok
+int		ft_islower(int c); //ok pas obli
+int		ft_isupper(int c); //ok pas obli
+int		ft_isspace(int c); //ok pas obli
 
 #endif

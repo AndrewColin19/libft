@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 16:11:25 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/07 16:11:25 by acolin           ###   ########.fr       */
+/*   Created: 2021/10/12 18:33:43 by acolin            #+#    #+#             */
+/*   Updated: 2021/10/12 18:33:43 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned char	*a;
+	size_t		size_s;
+	char		*newstring;
 
-	a = (unsigned char *) s;
-	while (n)
-	{
-		*a = (unsigned char) c;
-		a++;
-		n--;
-	}
-	return (s);
+	if (!s1 || !set)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	size_s = ft_strlen(s1);
+	while (size_s && ft_strchr(set, s1[size_s - 1]))
+		size_s--;
+	newstring = ft_substr((char *)s1, 0, size_s);
+	return (newstring);
 }

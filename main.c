@@ -12,9 +12,19 @@
 
 #include "libft.h"
 
-int	main(void)
+int	main(int argc, char *argv[])
 {
-	size_t i = ft_strlcat("saut", "salutdvdv", 13);
-	printf("%i\n", i);
+	char	**tab;
+	int		i;
+
+	(void) argc;
+	(void) argv;
+	tab = ft_split("hellocworld", 'c');
+	i = 0;
+	while (tab[i] != 0)
+	{
+		ft_putstr_fd(tab[i], 1);
+		i++;
+	}
 	return (1);
 }
