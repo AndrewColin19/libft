@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 11:41:37 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/07 11:41:37 by acolin           ###   ########.fr       */
+/*   Created: 2021/10/14 15:46:56 by acolin            #+#    #+#             */
+/*   Updated: 2021/10/14 15:46:56 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(int argc, char *argv[])
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	**tab;
-	int		i;
+	unsigned int	i;
 
-	(void) argc;
-	(void) argv;
-	tab = ft_split("hellocworld", 'c');
+	if (!s || !f)
+		return ;
 	i = 0;
-	while (tab[i] != 0)
+	while (s[i] != '\0')
 	{
-		ft_putstr_fd(tab[i], 1);
+		f(i, s + i);
 		i++;
 	}
-	return (1);
 }

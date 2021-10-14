@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 12:52:04 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/07 12:52:04 by acolin           ###   ########.fr       */
+/*   Created: 2021/10/14 23:29:13 by acolin            #+#    #+#             */
+/*   Updated: 2021/10/14 23:29:13 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *pnbr)
-{	
-	int	neg;
-	int	num;
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*new;
 
-	num = 0;
-	neg = 1;
-	while (*pnbr == ' ' || *pnbr == '\n'
-		|| *pnbr == '\t' || *pnbr == '\r'
-		|| *pnbr == '\v' || *pnbr == '\f')
-		pnbr++;
-	if (*pnbr == '-' || *pnbr == '+')
-	{
-		if (*pnbr == '-')
-		{
-			neg = -1;
-		}
-		pnbr++;
-	}
-	while (ft_isdigit(*pnbr))
-	{
-		num *= 10;
-		num += *pnbr - '0';
-		pnbr++;
-	}
-	return (num * neg);
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

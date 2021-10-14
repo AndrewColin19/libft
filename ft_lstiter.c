@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 12:38:48 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/07 12:38:48 by acolin           ###   ########.fr       */
+/*   Created: 2021/10/15 00:58:43 by acolin            #+#    #+#             */
+/*   Updated: 2021/10/15 00:58:43 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(int c)
+/**
+ * \name ft_lstiter
+ * Itère sur la list lst et applique la fonction f au
+ * contenu chaque élément.
+ * 
+ * \param	lst	L’adresse du pointeur vers un élément.
+ * \param	f	L’adresse de la fonction à appliquer.
+ * \return		none
+ */
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	return (c == ' ' || c == '\n'
-		|| c == '\t' || c == '\r'
-		|| c == '\v' || c == '\f');
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

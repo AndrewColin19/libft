@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 12:52:04 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/07 12:52:04 by acolin           ###   ########.fr       */
+/*   Created: 2021/10/15 00:24:27 by acolin            #+#    #+#             */
+/*   Updated: 2021/10/15 00:24:27 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *pnbr)
-{	
-	int	neg;
-	int	num;
+void	ft_lstadd_back(t_list **alst, t_list *new)
+{
+	t_list	*lst;
 
-	num = 0;
-	neg = 1;
-	while (*pnbr == ' ' || *pnbr == '\n'
-		|| *pnbr == '\t' || *pnbr == '\r'
-		|| *pnbr == '\v' || *pnbr == '\f')
-		pnbr++;
-	if (*pnbr == '-' || *pnbr == '+')
+	if (alst)
 	{
-		if (*pnbr == '-')
-		{
-			neg = -1;
-		}
-		pnbr++;
+		if (*alst == NULL)
+			*alst = new;
+		lst = ft_lstlast(*(alst));
+		lst->next = new;
 	}
-	while (ft_isdigit(*pnbr))
-	{
-		num *= 10;
-		num += *pnbr - '0';
-		pnbr++;
-	}
-	return (num * neg);
 }

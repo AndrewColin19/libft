@@ -59,7 +59,7 @@ static char	**ft_mal_tab(char **tab, char const *s, char c)
 	{
 		if (s[i] != c)
 			k++;
-		else
+		if (s[i] == c || s[i + 1] == '\0')
 		{
 			if (k != 0)
 			{
@@ -89,17 +89,16 @@ static char	**ft_fill_tab(char **tab, char const *s, char c)
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)
-			tab[j][k++] = s[i++];
-		else
+			tab[j][k++] = s[i];
+		else if (s[i] == c && s[i + 1] != '\0' && k != 0)
 		{
-			tab[j][k] = '\0';
-			ft_putstr_fd(tab[j], 1);
-			j++;
+			tab[j++][k] = '\0';
 			k = 0;
 		}
 		i++;
 	}
-	tab[j] = 0;
+	tab[j][k] = '\0';
+	tab[j + 1] = 0;
 	return (tab);
 }
 
@@ -109,8 +108,9 @@ char	**ft_split(char const *s, char c)
 	char	**tab;
 
 	nb_word = ft_nb_word(s, c);
+	if (!nb_word)
+		return (NULL);
 	tab = malloc(sizeof(char *) * nb_word + 1);
-	printf("%i\n", nb_word);
 	if (!tab)
 		return (NULL);
 	return (ft_fill_tab(ft_mal_tab(tab, s, c), s, c));

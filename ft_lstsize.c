@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 12:52:04 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/07 12:52:04 by acolin           ###   ########.fr       */
+/*   Created: 2021/10/14 23:54:31 by acolin            #+#    #+#             */
+/*   Updated: 2021/10/14 23:54:31 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_atoi(const char *pnbr)
-{	
-	int	neg;
-	int	num;
+int	ft_lstsize(t_list *lst)
+{
+	int		i;
+	t_list	*sv;
 
-	num = 0;
-	neg = 1;
-	while (*pnbr == ' ' || *pnbr == '\n'
-		|| *pnbr == '\t' || *pnbr == '\r'
-		|| *pnbr == '\v' || *pnbr == '\f')
-		pnbr++;
-	if (*pnbr == '-' || *pnbr == '+')
+	i = 0;
+	sv = lst;
+	while (sv)
 	{
-		if (*pnbr == '-')
-		{
-			neg = -1;
-		}
-		pnbr++;
+		sv = sv->next;
+		i++;
 	}
-	while (ft_isdigit(*pnbr))
-	{
-		num *= 10;
-		num += *pnbr - '0';
-		pnbr++;
-	}
-	return (num * neg);
+	return (i);
 }

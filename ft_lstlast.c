@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 12:33:33 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/07 12:33:33 by acolin           ###   ########.fr       */
+/*   Created: 2021/10/15 00:15:33 by acolin            #+#    #+#             */
+/*   Updated: 2021/10/15 00:15:33 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_islower(int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	return (c >= 'a' && c <= 'z');
+	if (lst)
+		while (lst->next)
+			lst = lst->next;
+	return (lst);
 }
