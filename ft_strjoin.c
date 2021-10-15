@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/**
+ * Alloue (avec malloc(3)) et retourne une nouvelle
+ * chaine, résultat de la concaténation de s1 et s2.
+ *
+ * \param	*s1		La chaine de caractères préfixe.
+ * \param	*s2		La chaine de caractères suffixe.
+ * \return			La nouvelle chaine de caractères. NULL si
+ * 					l’allocation échoue.
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;

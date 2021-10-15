@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * vérifie s'il s'agit d'un caractère imprimable, y compris l'espace.
+ *
+ * \param	c	caractère a tester
+ * \return		Les valeurs renvoyées sont non nulles 
+ *				si le caractère c entre dans la catégorie testée, et zéro sinon
+ */
 int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);

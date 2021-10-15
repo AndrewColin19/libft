@@ -38,6 +38,15 @@ static void	ft_fill(int *i, char *s, long n)
 		s[(*i)++] = n + '0';
 }
 
+/**
+ * Alloue (avec malloc(3)) et retourne une chaine de
+ * caractères représentant l’integer reçu en argument.
+ * Les nombres négatifs doivent être gérés.
+ *
+ * \param	n	l’integer à convertir.
+ * \return		La chaine de caractères représentant l’integer.
+ * 				NULL si l’allocation échoue.
+ */
 char	*ft_itoa(int n)
 {
 	int		i;

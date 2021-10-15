@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/**
+ * Écrit La chaine de caractères ’s’ sur le file
+ * descriptor donné, suivie d’un retour à la ligne.
+ *
+ * \param	*s	La chaine de caractères à écrire.
+ * \param	fd	Le file descriptor sur lequel écrire.
+ * \return		None
+ */
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);

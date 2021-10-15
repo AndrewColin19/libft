@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/**
+ * met à 0 (octets contenant « \0 ») les n premiers octets du bloc 
+ * pointé par s.
+ *
+ * \param	*s	pointeur sur une zone mémoire
+ * \param	n	nombres d'octets
+ * \return		None
+ */
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);

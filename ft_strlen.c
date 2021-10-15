@@ -11,6 +11,13 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+/**
+ * calcule la longueur de la chaîne de caractères s, 
+ * sans compter l'octet nul « \0 » final.
+ *
+ * \param	*s		pointeur sur la chaine à compter 
+ * \return			renvoie le nombre de caractères dans la chaîne s. 
+ */
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;

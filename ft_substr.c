@@ -12,6 +12,20 @@
 
 #include "libft.h"
 
+/**
+ * Alloue (avec malloc(3)) et retourne une chaine de
+ * caractères issue de la chaine ’s’.
+ * Cette nouvelle chaine commence à l’index ’start’ et
+ * a pour taille maximale ’len’
+ *
+ * \param	*s		La chaine de laquelle extraire la nouvelle
+ * 					chaine
+ * \param	start	L’index de début de la nouvelle chaine dans la
+ * 					chaine ’s’.
+ * \param	len		La taille maximale de la nouvelle chaine.
+ * \return			The nouvelle chaine de caractere. NULL si
+ * 					l’allocation échoue.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;

@@ -12,11 +12,21 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+/**
+ * copie n octets depuis la zone mémoire src vers la zone mémoire dest. 
+ * Les deux zones ne doivent pas se chevaucher. Si c'est le cas, 
+ * utilisez plutôt ft_memmove(3).
+ *
+ * \param	*dst	pointeur sur la zone mémoire de déstination
+ * \param	*src	pointeur sur la zone mémoire source
+ * \param	n		nombres d'octets à copier
+ * \return			renvoie un pointeur sur dst.
+ */
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*s;
 
-	s = (char *)dest;
+	s = (char *)dst;
 	while (n)
 	{
 		*(char *)s = *(char *)src;
@@ -24,5 +34,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		src++;
 		n--;
 	}
-	return (dest);
+	return (dst);
 }

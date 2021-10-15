@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * convertit la lettre c en majuscule si c'est possible.
+ *
+ * \param	c	caractère à convertir
+ * \return		La valeur renvoyée est celle de la lettre convertie, 
+ * 				ou bien c si la conversion n'était pas possible. 
+ */
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')

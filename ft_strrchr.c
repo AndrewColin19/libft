@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/**
+ * renvoie un pointeur sur la première occurrence du caractère c 
+ * dans la chaîne s.
+ *
+ * \param	*s	chaine de caractère
+ * \param	c	caractère à trouver
+ * \return		renvoient un pointeur sur le caractère correspondant, 
+ * 				ou NULL si le caractère n'a pas été trouvé.
+ */
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*r;

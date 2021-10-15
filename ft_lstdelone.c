@@ -13,16 +13,14 @@
 #include "libft.h"
 
 /**
- * \name ft_lstdelone
- * 
  * Libère la mémoire de l’élément passé en argument
  * en utilisant la fonction del puis avec free(3). La
  * mémoire de next ne doit pas être free.
  * 
- * \param	lst	L’élement à free
- * \param	del	L’adresse de la fonction permettant de 
- * supprimer le contenu de l’élement.
- * \return		none
+ * \param	*lst	L’élement à free
+ * \param	*del	L’adresse de la fonction permettant de 
+ * 					supprimer le contenu de l’élement.
+ * \return			none
  */
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {

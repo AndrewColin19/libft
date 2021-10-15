@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/**
+ * Ajoute l’élément ’new’ au début de la liste.
+ * 
+ * \param	**alst		L’adresse du pointeur vers le premier élément 
+ * 						de la liste.
+ * \param	*new		L’adresse du pointeur vers l’élément à rajouter
+ * 						à la liste.
+ * \return				None
+ */
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	if (alst && new)

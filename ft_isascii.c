@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/**
+ * vérifie si c est un unsigned char sur 7 bits, 
+ * entrant dans le jeu de caractères ASCII.
+ *
+ * \param	c	caractère a tester
+ * \return		Les valeurs renvoyées sont non nulles 
+ *				si le caractère c entre dans la catégorie testée, et zéro sinon
+ */
 int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);

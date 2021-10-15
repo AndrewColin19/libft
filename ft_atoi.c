@@ -12,30 +12,36 @@
 
 #include "libft.h"
 
-int	ft_atoi(const char *pnbr)
+/**
+ * convertit le début de la chaîne pointée par nptr en entier de type int .
+ *
+ * \param	nptr	chaine à convertir
+ * \return			Le résultat de la conversion.
+ */
+int	ft_atoi(const char *nptr)
 {	
 	int	neg;
 	int	num;
 
 	num = 0;
 	neg = 1;
-	while (*pnbr == ' ' || *pnbr == '\n'
-		|| *pnbr == '\t' || *pnbr == '\r'
-		|| *pnbr == '\v' || *pnbr == '\f')
-		pnbr++;
-	if (*pnbr == '-' || *pnbr == '+')
+	while (*nptr == ' ' || *nptr == '\n'
+		|| *nptr == '\t' || *nptr == '\r'
+		|| *nptr == '\v' || *nptr == '\f')
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
 	{
-		if (*pnbr == '-')
+		if (*nptr == '-')
 		{
 			neg = -1;
 		}
-		pnbr++;
+		nptr++;
 	}
-	while (ft_isdigit(*pnbr))
+	while (ft_isdigit(*nptr))
 	{
 		num *= 10;
-		num += *pnbr - '0';
-		pnbr++;
+		num += *nptr - '0';
+		nptr++;
 	}
 	return (num * neg);
 }

@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * Écrit l’integer ’n’ sur le file descriptor donné.
+ *
+ * \param	n	La chaine de caractères à écrire.
+ * \param	fd	Le file descriptor sur lequel écrire.
+ * \return		None
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nbr;

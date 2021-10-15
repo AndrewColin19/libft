@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+/**
+ * Applique la fonction f à chaque caractère de la
+ * chaîne de caractères transmise comme argument, et
+ * en passant son index comme premier argument. Chaque
+ * caractère est transmis par adresse à f pour être
+ * modifié si nécessaire.
+ *
+ * \param	*s	La chaine de caractères sur laquelle itérer.
+ * \param	*f	La fonction à appliquer à chaque caractère.
+ * \return		None
+ */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;

@@ -12,6 +12,19 @@
 
 #include "libft.h"
 
+/**
+ * localise la première occurrence de la chaîne s2 
+ * dans la chaîne s1 .
+ *
+ * \param	*s1		la chaine où rechercher
+ * \param	*s2		la chaine à trouver
+ * \param	len		le nombre maximum de caractères à rechercher
+ * \return			Si s2 est une chaîne vide, s1 est renvoyé, 
+ * 					si s2 n'apparaît nulle part dans s1 ,
+ * 					NULL est renvoyé ; sinon un pointeur vers le premier 
+ * 					caractère du premier
+ * 					l'occurrence de s2 est renvoyée.
+ */
 char	*strnstr(const char *s1, const char *s2, size_t len)
 {
 	size_t	pos;

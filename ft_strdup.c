@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+/**
+ * renvoie un pointeur sur une nouvelle chaîne de caractères 
+ * qui est dupliquée depuis s. 
+ * La mémoire occupée par cette nouvelle chaîne 
+ * est obtenue en appelant malloc(3), 
+ * et peut (doit) donc être libérée avec free(3).
+ *
+ * \param	*s	La chaine à dupliquer
+ * \return		renvoie un pointeur sur la chaîne dupliquée, 
+ * 				ou NULL s'il n'y avait pas assez de mémoire.
+ */
 char	*ft_strdup(const char *s)
 {
 	char	*str;

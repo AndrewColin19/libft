@@ -11,8 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
+/**
+ * Compte le nombre d’éléments de la liste.
+ * 
+ * \param	*lst	Le début de la liste.
+ * \return			Taille de la liste.
+ */
 int	ft_lstsize(t_list *lst)
 {
 	int		i;

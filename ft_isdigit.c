@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * vérifie si l'on a un chiffre (0 à 9).
+ *
+ * \param	c	caractère a tester
+ * \return		Les valeurs renvoyées sont non nulles 
+ *				si le caractère c entre dans la catégorie testée, et zéro sinon
+ */
 int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');

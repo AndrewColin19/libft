@@ -102,6 +102,18 @@ static char	**ft_fill_tab(char **tab, char const *s, char c)
 	return (tab);
 }
 
+/**
+ * Alloue (avec malloc(3)) et retourne un tableau
+ * de chaines de caracteres obtenu en séparant ’s’ à
+ * l’aide du caractère ’c’, utilisé comme délimiteur.
+ * Le tableau doit être terminé par NULL.
+ *
+ * \param	*s	La chaine de caractères à découper.
+ * \param	c	Le caractère délimitant.
+ * \return		Le tableau de nouvelles chaines de caractères,
+ * 				résultant du découpage. NULL si l’allocation
+ * 				échoue.
+ */
 char	**ft_split(char const *s, char c)
 {
 	int		nb_word;

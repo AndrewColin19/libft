@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+/**
+ * ajoute la chaîne terminée par NUL src à la fin de dst. 
+ * Il ajoutera au plus size - strlen (dst) - 1 octets, 
+ * terminant le résultat par NUL.
+ *
+ * \param	*dst	La chaîne à ajouter à src
+ * \param	*src	La chaîne à y ajouter
+ * \param	size	La taille du tampon de destination.
+ * \return			renvoient la longueur totale de la chaîne 
+ * 					qu'elles ont essayé de créer.
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	size_src;
