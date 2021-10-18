@@ -2,7 +2,7 @@
 libftTester
 *.swp
 *.tmp
-.DS_Strore
+.DS_Store
 *.exe
 *.a
 *.out
