@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 21:03:31 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/07 21:03:31 by acolin           ###   ########.fr       */
+/*   Updated: 2021/10/18 11:50:04 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*s;
 
 	s = (char *)dst;
+	if (!dst && !src)
+		return (dst);
 	while (n)
 	{
 		*(char *)s = *(char *)src;

@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 17:21:23 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/12 17:21:23 by acolin           ###   ########.fr       */
+/*   Updated: 2021/10/18 16:56:53 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) <= start)
+		return (ft_strdup(""));
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
 	str = (char *)malloc(sizeof(char) * len + 1);
 	if (!str)
 		return (NULL);

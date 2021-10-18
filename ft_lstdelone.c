@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 00:43:44 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/15 00:43:44 by acolin           ###   ########.fr       */
+/*   Updated: 2021/10/18 15:20:42 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@
  */
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
+	if (lst != NULL)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

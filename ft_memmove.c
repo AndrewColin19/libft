@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:53:19 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/12 15:53:19 by acolin           ###   ########.fr       */
+/*   Updated: 2021/10/18 11:50:42 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 	s = (char *)src;
 	d = (char *)dst;
+	if (!dst && !src)
+		return (NULL);
 	if (d > s)
 		while (n-- > 0)
 			d[n] = s[n];

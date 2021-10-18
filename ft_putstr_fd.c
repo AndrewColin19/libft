@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:36:32 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/07 11:36:32 by acolin           ###   ########.fr       */
+/*   Updated: 2021/10/18 12:37:07 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,12 @@
  */
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
+	if (s)
 	{
-		ft_putchar_fd(*s, fd);
-		s++;
+		while (*s)
+		{
+			ft_putchar_fd(*s, fd);
+			s++;
+		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 00:24:27 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/15 00:24:27 by acolin           ###   ########.fr       */
+/*   Updated: 2021/10/18 15:32:31 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*lst;
 
-	if (alst)
+	if (*alst == NULL)
 	{
-		if (*alst == NULL)
-			*alst = new;
-		lst = ft_lstlast(*(alst));
-		lst->next = new;
+		*alst = new;
+		return ;
 	}
+	lst = ft_lstlast(*(alst));
+	lst->next = new;
 }

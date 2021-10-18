@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 15:39:09 by acolin            #+#    #+#             */
-/*   Updated: 2021/10/07 15:39:09 by acolin           ###   ########.fr       */
+/*   Updated: 2021/10/18 12:23:07 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
  * 					caractère du premier
  * 					l'occurrence de s2 est renvoyée.
  */
-char	*strnstr(const char *s1, const char *s2, size_t len)
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
 	size_t	pos;
 	size_t	i;

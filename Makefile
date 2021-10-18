@@ -6,14 +6,14 @@
 #    By: acolin <acolin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 13:09:45 by acolin            #+#    #+#              #
-#    Updated: 2021/10/07 13:09:45 by acolin           ###   ########.fr        #
+#    Updated: 2021/10/18 17:42:45 by acolin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
-RM = del /f
+RM = rm -f
 SRCS =  ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -50,14 +50,14 @@ SRCS =  ft_isalpha.c \
 		ft_putnbr_fd.c
 
 SRCS_B = 	ft_lstnew.c \
-	  		ft_lstadd_front.c \
-	  		ft_lstsize.c \
-	  		ft_lstlast.c \
-	  		ft_lstadd_back.c \
-	  		ft_lstdelone.c \
-	  		ft_lstclear.c \
-	  		ft_lstiter.c \
-	  		ft_lstmap.c
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c
 
 OBJS = ${SRCS:.c=.o}
 
@@ -71,11 +71,11 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	${AR} ${NAME} ${OBJS}
 
-bonus: $(OBJS_B)
-	$(AR) $(NAME) $(OBJS_B)
+bonus: ${OBJS_B} ${OBJS}
+	${AR} ${NAME} ${OBJS} ${OBJS_B}
 
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${OBJS_B}
 
 fclean: clean
 	${RM} ${NAME}
