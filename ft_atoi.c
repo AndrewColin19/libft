@@ -27,8 +27,8 @@ static int	ft_overflow(int neg)
  */
 int	ft_atoi(const char *nptr)
 {	
-	int		neg;
-	long	num;
+	int	neg;
+	int	num;
 
 	num = 0;
 	neg = 1;
